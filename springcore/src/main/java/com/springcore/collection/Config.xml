@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/beans/spring-context
+        http://www.springframework.org/schema/beans/spring-context.xsd">
+        
+       <bean class="com.springcore.collection.Emp" name="Emp1">
+        
+        	<property name="name" value="Aqsa" />
+        	
+        	 <!-- 4# Example of injecting Collection Type (List) -->
+        	<property name="phones">
+        		<list>
+        			<value>342342423</value>
+        			<value>98879879</value>
+        		</list>
+        	</property>
+        	
+        	 <!-- 5# Example of injecting Collection Type (Set) -->
+        	<property name="addresses">
+        		<set>
+        			<value>USA</value>
+        			<value>DXB</value>
+        		</set>
+        	</property>
+        	
+        	 <!-- 6# Example of injecting Collection Type (Map) -->
+        	<property name="courses">
+        		<map>
+        			<entry key="Java" value="34"></entry>
+        			<entry key="K8" value="21"></entry>
+        		</map>
+        	</property>
+        	
+        	<!-- 7# Example of injecting Collection Type (Properties) -->
+        	<property name="hobbies">
+        		<props>
+        			<prop key="h1">Singing</prop>
+        			<prop key="h2">Dancing</prop>
+        		</props>
+        	</property>
+        </bean>
+        
+        </beans>

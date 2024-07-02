@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        ttp://www.springframework.org/schema/beans/spring-context
+        http://www.springframework.org/schema/beans/spring-context.xsd">
+        
+        <!-- 1#  Example of injecting value as element -->
+        <bean class="com.springcore.springcore.Student" name="Student1">
+        	<property name="studentId">
+        		<value>1</value>
+        	</property>
+        	  
+        	<property name="studentName">
+        		<value>Aqsa</value>
+        	</property>
+        	
+        	<property name="studentAddress">
+        		<value>USA</value>	
+        	</property>
+        	
+        	
+        </bean>
+        
+        <!-- 2#  Example of injecting value as a attribute -->
+        <bean class="com.springcore.springcore.Student" name="Student2">
+        	<property name="studentId" value="2" ></property>
+        	<property name="studentName" value="Umair" />
+        	<property name="studentAddress" value="DXB" />
+        	
+        
+        </bean>
+        
+        <!-- 3# Example of injecting value as P schema -->
+        <bean class="com.springcore.springcore.Student" name="Student3" p:studentId="3" p:studentName="yusra" p:studentAddress="PK" />
+        
+  
+        
+        
+        </beans>

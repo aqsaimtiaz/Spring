@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/beans/spring-context
+        http://www.springframework.org/schema/beans/spring-context.xsd">
+        
+      <bean class="com.springcore.constructorinjection.Certi" name="cer">
+     	<constructor-arg>
+     		<value>Android Using kotlin 1</value>
+     	</constructor-arg>
+     
+     	
+     </bean>
+
+
+     <bean class="com.springcore.constructorinjection.Person" name="Person1">
+     	<constructor-arg>
+     		<value>Aqsa</value>
+     	</constructor-arg>
+
+     	<constructor-arg value="1" type="int"></constructor-arg>
+		<constructor-arg  ref="cer" />
+		<constructor-arg>
+			<list>
+				<value>1</value>
+				<value>2</value>
+				<value>3</value>
+			</list>
+		</constructor-arg>
+     </bean>
+        
+        <!-- Example of injecting constructor as C schema -->
+<!--          <bean class="com.springcore.constructorinjection.Person" name="Person1" c:name="Aqsa" c:personId="5" c:certi-ref="cer"> -->
+<!--          </bean> -->
+
+	<bean class="com.springcore.constructorinjection.Addition" name="add" >
+		<constructor-arg value="12"></constructor-arg>
+		<constructor-arg value="34"></constructor-arg>
+	</bean>
+         
+</beans>
